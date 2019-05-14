@@ -1,0 +1,39 @@
+{
+    "version": "0.0.1",
+    "name": "cz.raynet.raynetcrm.MapsLauncher",
+    "cordova_name": "Maps Launcher",
+    "description": "Cordova/Phonegap plugin to navigate to a destination using native navigation apps on Android, iOS, and Windows",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dusag/MapsLauncher.git"
+    },
+    "cordova": {
+        "id": "uk.co.workingedge.phonegap.plugin.launchnavigator",
+        "platforms": [
+          "android",
+          "ios",
+          "windows"
+        ]
+    },
+    "keywords": [
+        "ecosystem:cordova",
+        "cordova",
+        "phonegap",
+        "ios",
+        "android",
+        "windows",
+        "navigation",
+        "navigator"
+    ],
+    "types": "./uk.co.workingedge.phonegap.plugin.launchnavigator.d.ts",
+    "engines": {
+        "cordovaDependencies": {
+            "4.0.0": {
+                "cordova-ios": ">=4.3.0",
+                "cordova-android": ">=6.3.0",
+                "cordova": ">=7.1.0"
+            }
+        }
+    }
+}
