@@ -108,6 +108,7 @@ ln.APP = {
     TOMTOM: "tomtom",
     BING_MAPS: "bing_maps",
     SYGIC: "sygic",
+    MAPY_CZ: "mapy_cz",
     HERE_MAPS: "here_maps",
     MOOVIT: "moovit",
     LYFT: "lyft",
@@ -152,6 +153,7 @@ ln.APPS_BY_PLATFORM[ln.PLATFORM.IOS] = [
     ln.APP.UBER,
     ln.APP.TOMTOM,
     ln.APP.SYGIC,
+    ln.APP.MAPY_CZ,
     ln.APP.HERE_MAPS,
     ln.APP.MOOVIT,
     ln.APP.LYFT,
@@ -191,6 +193,7 @@ ln.APP_NAMES[ln.APP.UBER] = "Uber";
 ln.APP_NAMES[ln.APP.TOMTOM] = "Tomtom";
 ln.APP_NAMES[ln.APP.BING_MAPS] = "Bing Maps";
 ln.APP_NAMES[ln.APP.SYGIC] = "Sygic";
+ln.APP_NAMES[ln.APP.MAPY_CZ] = "Mapy.cz";
 ln.APP_NAMES[ln.APP.HERE_MAPS] = "HERE Maps";
 ln.APP_NAMES[ln.APP.MOOVIT] = "Moovit";
 ln.APP_NAMES[ln.APP.LYFT] = "Lyft";
@@ -281,6 +284,10 @@ ln.TRANSPORT_MODES[ln.PLATFORM.IOS][ln.APP.APPLE_MAPS] = [
     ln.TRANSPORT_MODE.TRANSIT
 ];
 ln.TRANSPORT_MODES[ln.PLATFORM.IOS][ln.APP.SYGIC] = [
+    ln.TRANSPORT_MODE.DRIVING,
+    ln.TRANSPORT_MODE.WALKING
+];
+ln.TRANSPORT_MODES[ln.PLATFORM.IOS][ln.APP.MAPY_CZ] = [
     ln.TRANSPORT_MODE.DRIVING,
     ln.TRANSPORT_MODE.WALKING
 ];
@@ -535,7 +542,7 @@ ln.userSelect = function(destination, options, successCallback, errorCallback){
     options = options || {};
     options.errorCallback = options.errorCallback || errorCallback || emptyFn;
     options.successCallback = options.successCallback || successCallback || emptyFn;
-    
+
     // app selection
     options.appSelection = options.appSelection || {};
     options.appSelection.dialogPositionX = options.appSelection.dialogPositionX || 550;
@@ -545,7 +552,7 @@ ln.userSelect = function(destination, options, successCallback, errorCallback){
     options.appSelection.rememberChoice.enabled = typeof options.appSelection.rememberChoice.enabled !== "undefined" ? options.appSelection.rememberChoice.enabled : "prompt";
     options.appSelection.rememberChoice.prompt = options.appSelection.rememberChoice.prompt || {};
     options.appSelection.rememberChoice.prompt.callback = options.appSelection.rememberChoice.prompt.callback || emptyFn;
-    
+
     var buttonList = [], buttonMap = {};
 
     if(userSelectDisplayed) return;

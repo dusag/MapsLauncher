@@ -44,6 +44,7 @@ typedef NS_ENUM(NSUInteger, LNApp) {
 	LNAppUber,           // Uber
 	LNAppTomTom,         // TomTom
 	LNAppSygic,          // Sygic
+    LNAppMapyCz,         // Mapy.cz
 	LNAppHereMaps,       // HERE Maps
 	LNAppMoovit,         // Moovit
 	LNAppLyft,           // Lyft

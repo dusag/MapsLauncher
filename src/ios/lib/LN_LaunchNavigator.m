@@ -543,6 +543,10 @@ static NSDictionary* extras;
 }
 
 -(void)launchMapyCz {
+    NSMutableString* url = [[NSString stringWithFormat:@"%@?",
+                             [self urlPrefixForMapApp:LNAppMapyCz]
+                             ] mutableCopy];
+    
     if([self isEmptyCoordinate:destCoord]){
         [url appendFormat:@"q=%@", [destAddress stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]];
     }else{
@@ -1380,7 +1384,7 @@ static NSDictionary* extras;
         return @"com.sygic.aura://";
 
         case LNAppMapyCz:
-        return @"cz.seznam.mapy://";
+        return @"https://mapy.cz/";
 
         case LNAppHereMaps:
         return @"here-route://";
