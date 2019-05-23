@@ -3,7 +3,7 @@
     xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cz.raynet.raynetcrm.MapsLauncher"
-    version="0.0.2">
+    version="0.0.3">
 
   <name>Maps Launcher</name>
   <description>Cordova/Phonegap plugin to navigate to a destination using native navigation apps on Android, iOS, and Windows</description>
