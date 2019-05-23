@@ -13,8 +13,8 @@
     <engine name="cordova-android" version=">=6.3.0"/>
     <engine name="cordova-ios" version=">=4.3.0"/>
   </engines>
-  <repo>https://github.com/dpa99c/phonegap-launch-navigator.git</repo>
-  <issue>https://github.com/dpa99c/phonegap-launch-navigator/issues</issue>
+  <repo>https://github.com/dusag/MapsLauncher.git</repo>
+  <issue>https://github.com/dusag/MapsLauncher/issues</issue>
 
   <license>MIT</license>
   <keywords>cordova,phonegap,ios,android,windows,navigation,navigator</keywords>
